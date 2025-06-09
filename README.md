@@ -1,75 +1,61 @@
-# Contenido de este repositorio
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagem Secreta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        #message {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #ff6b81;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #ff4c61;
+        }
+    </style>
+</head>
+<body>
 
-Este repo cuenta con tres proyectos que usarás para tu curso de Git y Github.
+    <h1>Aperte o botão de coração para revelar uma mensagem secreta!</h1>
+    <button id="heartButton">❤️</button>
+    <div id="message">
+        <p>Para o meu Hachiman,</p>
+        <p>Você sempre diz que prefere a solidão, que as conexões humanas são só fachada e que evitar o contato é a melhor forma de evitar a dor. Mas eu enxerguei você além do sarcasmo e do olhar cansado. Vi o Hachiman que carrega o peso do mundo nos ombros para poupar os outros. O Hachiman que se machuca para que ninguém mais precise se ferir. E é por esse Hachiman que eu me apaixonei.</p>
+        <p>Às vezes, você age como se estivesse num mundo à parte, como se amar fosse um erro, uma complicação indesejada. Mas se amar você for um erro... então eu aceito estar errada para sempre. Porque, como você mesmo disse, eu quero algo genuíno. E esse sentimento que tenho por você é exatamente isso: real, imperfeito, intenso — genuíno.</p>
+        <p>Sei que você não precisa de declarações floridas, nem de promessas vazias. Você precisa de alguém que entenda o silêncio, que fique ao seu lado mesmo quando você disser que está tudo bem — mesmo quando não estiver. E eu quero ser essa pessoa. Quero te acompanhar nas suas caminhadas solitárias, mesmo que em silêncio, mesmo que apenas ao seu lado, como uma presença que não exige nada... só te ama, do jeito que você é.</p>
+        <p>Você me ensinou que nem todo herói usa capa — às vezes, ele só tem olhos mortos, uma língua afiada, e uma vontade inabalável de proteger o que é importante. E, Hachiman, você é o meu herói torto. E eu sou eternamente grata por ter te encontrado.</p>
+        <p>Com carinho (e uma pitada de sarcasmo, só pra te agradar),<br>Aquela que escolheu ficar ao seu lado — mesmo que o mundo não entenda.</p>
+    </div>
 
-Los proyectos son los siguientes:
+    <script>
+        document.getElementById('heartButton').onclick = function() {
+            document.getElementById('message').style.display = 'block';
+        };
+    </script>
 
-## Contribuciones
-
-¿Estás aquí para crear un Issue o un Pull Request? ¡Puedes agregar tu participación en nuesta lista de contribuidores! Ve a este documento y agrega tus datos por medio de un PR.
-
-[Lista de contribuciones](/Contribuciones.md)
-
-## Plantilla web para presentación
-
-Una muy colorida plantilla HTML básica para lograr una muy buena presentación y llevar a tu audiencia a todos tus canalaes sociales.
-
-Puedes verla [aquí](/miSitio/).
-
-## API de Python básica
-
-Una API básica con solo tres métodos de prueba. ¡Lo que importa es aprender de Github ahora!
-
-Si quieres probarla en modo local solo necesitas escribir los comandos:
-
-```bash
-pip install -r requirements.txt
-```
-
-Y luego podrás ejecutar la aplicación usando [uvicorn](https://www.uvicorn.org/).
-
-```bash
-uvicorn app:app --reload
-```
-
-Puedes verla [aquí](/API_Python/).
-
-## Paquete de PIP
-
-Un paquete muy simple de PIP que servirá para crear un artefacto. ¿Te imaginas publicando tu primer paquete PIP?
-
-Todos los archivos preconstruidos están ya cargados en este repo, sin embargo los únicos dos que necesitas son **setup.py** y el contenido de la carpeta **mi_paquete**, todo lo demás lo puedes borrar.
-
-Modifica **setup.py** con tu propia información.
-
-```python
-from setuptools import setup, find_packages
-
-setup(
-    name="paquetePlatzi",                           # Nombre del paquete
-    version="0.1.0",                                # Versión inicial
-    packages=find_packages(),                       # Paquetes a incluir
-    description="Un paquete pip simple de saludo",  # Breve descripción
-    author="Amin Espinoza",                         # Tu nombre
-    author_email="amin@platzi.com",                 # Tu correo electrónico
-    url="https://github.com/platzi/git-github",     # URL del proyecto
-)
-```
-
-Después de eso si es necesario, instala las herramientas adecuadas para empaquetar el proyecto.
-
-```bash
-pip install setuptools wheel
-```
-
-Empaqueta tu proyecto.
-
-```bash
-python setup.py sdist bdist_wheel
-```
-
-Aquí es donde están todos los archivos de esta carpeta y donde la clase comenzará.
-
-Puedes verla [aquí](/Paquete/).
-
-Prueba pull requests
+</body>
+</html>
